@@ -5,13 +5,14 @@ CREATE TABLE Demo_tbl (
   PtFIRST varchar (12) NOT NULL,
   DOB date NOT NULL,
   Sex char(1) NOT NULL,
-  Coverage varchar (5)
+  Coverage varchar (5),
+  DNA_ID char(42)
 );
 
 -- Copying in from CSV template
 -- The Copy function will write in the PTID serial variable (PK) automatically
 -- Field names are not case sensitive
-COPY Demo_tbl(ptid,ptlast,ptfirst,dob,sex,coverage)
+COPY Demo_tbl(ptid,ptlast,ptfirst,dob,sex,coverage,dna_id)
 FROM 'C:\Users\Paul\Desktop\DSB Workshop\BLA_DiabDems.csv' DELIMITER ',' CSV HEADER;
 
 --DROP TABLE GTT2_tbl CASCADE;
@@ -55,3 +56,7 @@ CREATE TABLE LabsPost_tbl (
 );
 COPY LabsPost_tbl(ptid,collectdate,hgba1c,fastgluc,bmi,sedrate,vitd,randgluc)
 FROM 'C:\Users\Paul\Desktop\DSB Workshop\BLA_DiabLabsPost.csv' DELIMITER ',' CSV HEADER;
+
+-- DROP TABLE Genetics_tbl;
+CREAT TABLE Genetics_tbl (
+);
