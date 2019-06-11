@@ -56,7 +56,3 @@ CREATE TABLE LabsPost_tbl (
 );
 COPY LabsPost_tbl(ptid,collectdate,hgba1c,fastgluc,bmi,sedrate,vitd,randgluc)
 FROM 'C:\Users\Paul\Desktop\DSB Workshop\BLA_DiabLabsPost.csv' DELIMITER ',' CSV HEADER;
-
--- DROP TABLE Genetics_tbl;
-CREAT TABLE Genetics_tbl (
-);
